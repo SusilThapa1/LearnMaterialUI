@@ -11,6 +11,7 @@ import FormatBoldIcon from "@mui/icons-material/FormatBold";
 import FormatItalicIcon from "@mui/icons-material/FormatItalic";
 import FormatUnderlinedIcon from "@mui/icons-material/FormatUnderlined";
 import { useState } from "react";
+import Myname from "./Myname";
 const MuiButton = () => {
   const [formats, setFomats] = useState<string | null>(null);
   console.log(formats);
@@ -90,6 +91,7 @@ const MuiButton = () => {
           <Button>Right</Button>
         </ButtonGroup>
       </Stack>
+      <Myname />
       <Stack direction="row">
         <ToggleButtonGroup
           aria-label="text-formatting"

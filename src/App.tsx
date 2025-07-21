@@ -1,20 +1,21 @@
-import { Button, Stack, Typography } from "@mui/material";
 import "./App.css";
+// import { Button, Stack, Typography } from "@mui/material";
 // import MuiSelect from "./components/MuiSelect";
 // import MuiButton from "./components/MuiButton";
 // import MuiTextField from "./components/MuiTextField";
 // import MuiTypography from "./components/MuiTypography";
-import { useAppDispatch, useAppSelector } from "./Redux/hooks/hooks";
-import { increment, decrement } from "./Redux/slices/counter/counter";
+// import { useAppDispatch, useAppSelector } from "./Redux/hooks/hooks";
+// import { increment, decrement } from "./Redux/slices/counter/counter";
+import MuiCard from "./components/MuiCard";
 function App() {
-  const count = useAppSelector((state) => state.counter);
-  const dispatch = useAppDispatch();
+  // const count = useAppSelector((state) => state.counter);
+  // const dispatch = useAppDispatch();
   return (
     <div className="App">
-      <Stack direction="row" spacing={2}>
+      {/* <Stack direction="row" spacing={2}>
         <Button
           variant="contained"
-          color="error"
+          color="secondary"
           onClick={() => dispatch(decrement())}
         >
           -
@@ -31,10 +32,11 @@ function App() {
         </Button>
       </Stack>
 
-      {/* <MuiTypography /> */}
-      {/* <MuiButton /> */}
-      {/* <MuiTextField /> */}
-      {/* <MuiSelect /> */}
+      <MuiTypography />
+      <MuiButton />
+      <MuiTextField />
+      <MuiSelect /> */}
+      <MuiCard />
     </div>
   );
 }

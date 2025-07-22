@@ -1,4 +1,6 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import Login from "./components/Login";
 // import { Button, Stack, Typography } from "@mui/material";
 // import MuiSelect from "./components/MuiSelect";
 // import MuiButton from "./components/MuiButton";
@@ -36,7 +38,11 @@ function App() {
       <MuiButton />
       <MuiTextField />
       <MuiSelect /> */}
-      <MuiCard />
+      {/* <MuiCard /> */}
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/card" element={<MuiCard />} />
+      </Routes>
     </div>
   );
 }

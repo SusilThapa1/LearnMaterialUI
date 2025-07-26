@@ -1,9 +1,28 @@
-import React from 'react'
+import { useState } from "react";
+import {
+  FormControl,
+  FormLabel,
+  RadioGroup,
+  FormControlLabel,
+  Radio,
+} from "@mui/material";
 
 const MuiCheckBox = () => {
-  return (
-    <div>MuiCheckBox</div>
-  )
-}
+  const [gender, setGender] = useState("");
 
-export default MuiCheckBox
+  const handleChange = (event) => {
+    setGender(event.target.value);
+  };
+
+  return (
+    <FormControl>
+      <FormLabel>Gender</FormLabel>
+      <RadioGroup row name="gender" value={gender} onChange={handleChange}>
+        <FormControlLabel value="male" control={<Radio />} label="Male" />
+        <FormControlLabel value="female" control={<Radio />} label="Female" />
+      </RadioGroup>
+    </FormControl>
+  );
+};
+
+export default MuiCheckBox;

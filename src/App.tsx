@@ -9,6 +9,7 @@ import Login from "./components/Login";
 // import { useAppDispatch, useAppSelector } from "./Redux/hooks/hooks";
 // import { increment, decrement } from "./Redux/slices/counter/counter";
 import MuiCard from "./components/MuiCard";
+import MuiCheckBox from "./components/MuiCheckBox";
 function App() {
   // const count = useAppSelector((state) => state.counter);
   // const dispatch = useAppDispatch();
@@ -39,6 +40,7 @@ function App() {
       <MuiTextField />
       <MuiSelect /> */}
       {/* <MuiCard /> */}
+      <MuiCheckBox />
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/card" element={<MuiCard />} />

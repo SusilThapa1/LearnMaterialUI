@@ -10,7 +10,7 @@ import {
 const MuiCheckBox = () => {
   const [gender, setGender] = useState("");
 
-  const handleChange = (event) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setGender(event.target.value);
   };
 

@@ -63,7 +63,7 @@ const Login = () => {
           variant="contained"
           fullWidth
           disabled={status === "loading"}
-          sx={{ mt: 2 }}
+          className="capitalize"
         >
           {status === "loading" ? "Logging in..." : "Login"}
         </Button>

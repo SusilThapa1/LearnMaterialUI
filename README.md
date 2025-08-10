@@ -1,69 +1,77 @@
-# React + TypeScript + Vite
+# Material UI React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a modern React application built with:
 
-Currently, two official plugins are available:
+- [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/) for fast development
+- [Material UI (MUI)](https://mui.com/) for UI components
+- [Redux Toolkit](https://redux-toolkit.js.org/) for state management
+- [Tailwind CSS](https://tailwindcss.com/) for utility-first styling
+- [TanStack Table](https://tanstack.com/table/v8) for advanced tables
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Responsive UI with Material UI and Tailwind CSS
+- User table with sorting and pagination (TanStack Table)
+- Redux state management (with hydration support)
+- Example components: Button, Card, Checkbox, Select, TextField, Typography
+- Routing with React Router
+- ESLint and TypeScript strict configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Getting Started
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerequisites
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- Node.js (v18+ recommended)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Installation
+
+```bash
+git clone <your-repo-url>
+cd MaterialUI
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+App will be available at [http://localhost:5173](http://localhost:5173) by default.
+
+### Build
+
+```bash
+npm run build
+```
+
+### Lint
+
+```bash
+npm run lint
+```
+
+## Project Structure
+
+- `src/components/` – UI and feature components (e.g., `ReactTable`, `MuiButton`, etc.)
+- `src/constants/data.json` – Mock user data for the table
+- `src/Redux/` – Redux store, slices, actions, and hooks
+- `src/App.tsx` – Main app component
+- `src/main.tsx` – Entry point
+
+## Main Dependencies
+
+- `@mui/material`, `@mui/icons-material`, `@emotion/react`, `@emotion/styled`
+- `@reduxjs/toolkit`, `react-redux`
+- `@tanstack/react-table`
+- `tailwindcss`, `@tailwindcss/vite`
+- `react-router-dom`
+
+## Example: User Table
+
+The `ReactTable` component displays a paginated, sortable table of users from `data.json` using TanStack Table and Material UI components.
+
+## License
+
+MIT

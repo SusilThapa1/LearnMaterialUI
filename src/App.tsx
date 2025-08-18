@@ -41,11 +41,11 @@ function App() {
       <MuiTextField />
       <MuiSelect /> */}
       {/* <MuiCard /> */}
-      {/* <MuiCheckBox />
+      {/* <MuiCheckBox /> */}
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/card" element={<MuiCard />} />
-      </Routes> */}
+      </Routes> 
       <ReactTable />
     </div>
   );
